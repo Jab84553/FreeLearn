@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>EDU|Kids learning for free</title>
+    <link rel="icon" type="image/png" href="Favicon.png">
+ </head>
+ <body>
+  <h1>JB's Frame V1</h1>
+  <p>Welcome to my first site! It's probably sloppy, but it hopefully does job!<p>
+  <br>
+  <input type="text" id="userLink" placeholder="Link">
+  <button id="submitBtn">Change Site</button>
+  <iframe 
+    id="Display"
+    src="about:blank" 
+    width="100%" 
+    height="500px" 
+    style="border:2px solid black;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TNM2CUe5DYo?si=C4T6_fIlx7s6zFdV"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+  <p>How to use youtube links:
+  <p>Copy your youtube video link from google/bing or the upcoming catalog,</p>
+  <p>Paste the link into the text box,</p>
+  <p>Replace "watch?v=" with "embed/" in the link,</p>
+  <p>Click enter and bam! The video should load in the iFrame!</p>
+  <br>
+  <p>Version history:</p>
+  <p>V1: Hello World! | Youtube only.</p>
+  <script>
+  // 1. Find the button and the iframe in the code
+  const myButton = document.getElementById('submitBtn');
+  const myIframe = document.getElementById('Distplay');
+  const myInput = document.getElementById('userLink');
+
+  // 2. Tell the button to listen for a "click"
+  myButton.addEventListener('click', function() {
+    
+  // 3. Grab whatever the user typed into the box
+  let newUrl = myInput.value;
+
+  // 4. Update the iframe's "src" (source) to that new link
+  Display.src = newUrl;
+  });
+  </script>
+ </body>
+</html>
+
